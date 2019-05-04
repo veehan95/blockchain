@@ -1,0 +1,70 @@
+{
+  "med": [{
+    "Name": "Clarinase Tablet 120mg",
+    "Manufacturer": "Cutik Medicare Pvt Ltd",
+    "Batch No": "71RPG74A01",
+    "Expiry Date": "12-09-2019",
+    "Manufacture Date": "12-09-2016",
+    "Contents": "Loratadine, Pseudoephedrine",
+    "Usage": "Cold, Sneezing, Runny nose, Itchy nose, Eye irritation, Red and itchy skin, Skin disorders, Allergies, High fever, Sinus congestion and pressure",
+    "Side Effects": "Headache, Drowsiness, Unusual tiredness and weakness, Sleeplessness, Stomach pain, diarrhea, Hives and wheezing, Difficulty in breathing, Swelling of face, lips, eyelids, tongue, hands and feet, Impaired Liver function, Influenza, Upper respiratory tract infection",
+    "Genre": "Medicine",
+    "latitude":3.049769,
+    "longitude": 101.587037,
+    "Shop Name": "H&P CLINIC",
+    "Address": "One City, 47100 Subang Jaya, Selangor",
+    "Approval": "Approved"
+  }, {
+    "Name": "Stenac Tablet 600mg",
+    "Manufacturer": "Synmosa Biopharma Corporation",
+    "Batch No": "B26881",
+    "Expiry Date": "23-08-2018",
+    "Manufacture Date": "23-08-2017",
+    "Contents": "Acetylcysteine",
+    "Usage": "Mucus thinning, Paracetamol overdose, Prevention of radiocontrast-induced nephropathy",
+    "Side Effects": "Rash, Urticaria, Pruritus, Hypotension, Wheezing, Shortness of breath, Nausea, Vomiting, Stomatitis, Fever, Rhinorrhea, Drowsiness, Clamminess, Chest tightness, Bronchoconstriction",
+    "Genre": "Medicine",
+    "latitude":3.1222288,
+    "longitude": 101.6277963,
+    "Shop Name": "QHC Medical Centre",
+    "Address": "No 2, Jalan USJ 9/5r, UEP, 47620 Subang Jaya, Selangor",
+    "Approval": "Approved"
+  }, {
+    "Name": "Tussidex Forte Linctus",
+    "Manufacturer": "Xepa-Soul Pattinson (Malaysia) Sdn Bhd",
+    "Batch No": "377872",
+    "Expiry Date": "30-06-2021",
+    "Manufacture Date": "31-07-2018",
+    "Contents": "Dextromethorphan Hydrobromide 15mg",
+    "Usage": "Cough",
+    "Side Effects": "Drowsiness, Dizziness, Nausea, Vomiting, Restlessness",
+    "Genre": "Medicine",
+    "latitude":3.01361507,
+    "longitude": 101.5837657,
+    "Shop Name": "Pusat Rawatan Islam Al-Qalam",
+    "Address": "NO 18, LORONG 1, KG TENGAH B, BATU 13, OFF, Jalan Klang, 47100 Puchong, Selangor",
+    "Approval": "Approved"
+  }, {
+    "Name": "Shiseido Bio-Performance Liftdynamic Serum, 1 oz",
+    "Manufacturer": "Hoshi Corporation",
+    "Batch No": "300822",
+    "Expiry Date": "31-04-2020",
+    "Manufacture Date": "30-04-2017",
+    "Contents": "Rosemary Phyto-Essence, Wild thyme and Vitamin E derivative, Super Bio-Hyaluronic Acid N",
+    "Usage": "Visibly lift and firm skin for youthful-looking density",
+    "Side Effects": "-",
+    "Genre": "Cosmetic",
+    "Approval": "Approved"
+  }, {
+    "Name": "Prego Roasted Garlic & Herb Italian Sauce",
+    "Manufacturer": "Campbell Cheong Chan (Malaysia) Sdn. Bhd.",
+    "Batch No": "892432",
+    "Expiry Date": "01-01-2019",
+    "Manufacture Date": "31-12-2017",
+    "Contents": "Pasta Sauce",
+    "Usage": "Serve with pasta",
+    "Side Effects": "-",
+    "Genre": "Food",
+    "Approval": "Approved"
+  }]
+}

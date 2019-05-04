@@ -1,8 +1,68 @@
 body {
-  padding: 50px;
+  padding: 0;
+  margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: linear-gradient(to right top, #051937, #432f5a, #844472, #c35e7b, #f88379);
+  color: white;
+  background-attachment: fixed;
+  height:100%;
 }
 
 a {
   color: #00B7FF;
+}
+
+div.bloackData{
+  background-color: rgba(0, 0, 0, .4);
+  border-radius: 20px;
+  width: 50%;
+  padding: 20px;
+  margin: auto;
+}
+
+div.bloackData *{
+  margin: auto;
+}
+
+hr {
+  background-color: rgba(255, 255, 255, .2);
+  color: rgba(255, 255, 255, .2);
+  border-color: rgba(255, 255, 255, .2);
+}
+
+div.bloackData div.title {
+
+}
+
+div.bloackData table {
+
+}
+
+div.bloackData table.mini {
+  margin: 0;
+}
+
+div.bloackData table tr {
+  text-align: left;
+}
+
+a, button {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 3px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+a.good, button.good {
+  background-color: #4CAF50;
+}
+
+a.bad, button.bad {
+  margin-left: 10px;
+  background-color: #f44336;
 }

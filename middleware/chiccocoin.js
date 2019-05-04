@@ -9,12 +9,20 @@ class Chiccocoin {
     this.mine = this.mine.bind(this)
     this.newTransaction = this.newTransaction.bind(this)
   }
+
+  updateChain(id,val) {
+    this.blockchain.updateChain(id,val)
+  }
+
   getChain (req, res, next) {
     req.responseValue = {
       message: 'Get Chain',
       chain: this.blockchain.chain
     }
     return next()
+  }
+  getChainData (req, res, next) {
+    return this.blockchain.chain
   }
 
   mine (req, res, next) {
@@ -23,17 +31,22 @@ class Chiccocoin {
     const proof = this.blockchain.proofOfWork(lastProof)
 
     // Create a new transaction with from 0 (this node) to our node (NODE_NAME) of 1 Chiccocoin
-    this.blockchain.newTransaction('0', process.env.NODE_NAME, 1)
+    this.blockchain.newTransaction(req.body)
 
     // Forge the new Block by adding it to the chain
     const previousHash = this.blockchain.hash(lastProof)
     const newBlock = this.blockchain.newBlock(proof, previousHash)
 
-    const responseValue = Object.assign({
-      message: 'New Block mined'
-    }, newBlock)
-    req.responseValue = responseValue
-    return next()
+    res.redirect('/chain/viewAll')
+  }
+
+  mineDefault (data) {
+    const lastBlock = this.blockchain.lastBlock()
+    const lastProof = lastBlock.proof
+    const proof = this.blockchain.proofOfWork(lastProof)
+    this.blockchain.newTransaction(data)
+    const previousHash = this.blockchain.hash(lastProof)
+    const newBlock = this.blockchain.newBlock(proof, previousHash)
   }
 
   newTransaction (req, res, next) {

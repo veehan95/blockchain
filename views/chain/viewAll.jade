@@ -1,0 +1,43 @@
+extends ../layout
+
+block content
+  br
+  if data.length > 0
+    each singleData in data
+      div.bloackData
+        div.title
+          h3 #{singleData.index}
+        hr(style="margin-top: 10px; margin-bottom: 10px;")
+        table
+          tr
+            th Timestamp
+            th :
+            th #{singleData.timestamp}
+          tr
+            th Product
+            th :
+            if singleData.medicine.length > 0
+              th
+                table.mini
+                  each medicine in singleData.medicine
+                    each key in Object.keys(medicine)
+                      if medicine[key].length > 0
+                        tr
+                          th #{key}
+                          th :
+                          th #{medicine[key]}
+            else
+              th -
+          tr
+            th Proof
+            th :
+            th #{singleData.proof}
+          tr
+            th Previous Hash
+            th :
+            th #{singleData.previous_hash}
+      br
+  else
+    div.bloackData
+      div.title
+        h3 No Block/Chain is found

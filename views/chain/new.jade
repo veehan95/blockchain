@@ -1,0 +1,62 @@
+extends ../layout
+
+block content
+  script function genreValueChange() { document.getElementById('Genre').value = document.getElementById('GenreSelect').value;  }
+  br
+  div.bloackData
+    div.title
+      h1 Create new Medicine/Food/Cosmetic Record into Blockchain
+    hr(style="margin-top: 10px; margin-bottom: 10px;")
+    form(method='POST', action='/chain/create')
+      table
+        tr
+          th Name
+          th
+            input(name="Name")
+        tr
+          th Genre
+          th
+            select#GenreSelect(onchange="genreValueChange()")
+              option(selected=true, disabled=true) -- Select --
+              option(value='Medicine') Medicine
+              option(value='Cosmetic') Cosmetic
+              option(value='Food') Food
+            input#Genre(name='Genre', style="display: none")
+        tr
+          th Manufacturer
+          th
+            input(name='Manufacturer')
+        tr
+          th Batch No
+          th
+            input(name='Batch No')
+        tr
+          th Expiry Date
+          th
+            input(type='text', name='Expiry Date')
+        tr
+          th Manufacture Date
+          th
+            input(type='text', name='Manufacture Date')
+        tr
+          th Contents
+          th
+            textarea(rows="4", cols="50", name='Contents')
+        tr
+          th Usage
+          th
+            textarea(rows="4", cols="50", name='Usage')
+        tr
+          th Side Effects
+          th
+            textarea(rows="4", cols="50", name='Side Effects')
+        tr
+          th Shop Name
+          th
+            input(type='text', name='Shop Name')
+        tr(style="display: none")
+          th
+            input#Genre(name='Approval', style="display: none", value="false")
+        tr
+          th
+            button.btn.btn-primary(type='submit' style="width:100%") Register Item

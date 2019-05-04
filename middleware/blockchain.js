@@ -17,11 +17,24 @@ class Blockchain {
     this.newBlock(100, 1)
   }
 
+  updateChain(id,val) {
+    this.chain = this.chain.map(chainData => {
+      if (chainData.index != id) {
+        return chainData
+      } else {
+        Object.keys(val).forEach(key => {
+          chainData.medicine[0][key] = val[key]
+        })
+        return chainData
+      }
+    })
+  }
+
   newBlock (proof, previousHash) {
     const block = {
-      index: this.chain.length + 1,
+      index: this.chain.length,
       timestamp: new Date(),
-      transactions: this.current_transactions,
+      medicine: this.current_transactions,
       proof: proof,
       previous_hash: previousHash
     }
@@ -30,12 +43,9 @@ class Blockchain {
     return block
   }
 
-  newTransaction (sender, recipient, amount) {
-    this.current_transactions.push({
-      sender: sender,
-      recipient: recipient,
-      amount: amount
-    })
+  newTransaction (data) {
+    console.log(`Block for ${data.Name} created.`)
+    this.current_transactions.push(data)
     return this.lastBlock()['index'] + 1
   }
 

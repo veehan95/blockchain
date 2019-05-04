@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+  br
+  if data.length > 0
+    each singleData in data
+      div.bloackData
+        div.title(style="position: relative")
+          h3 #{singleData.index}
+          div(style="position: absolute; right: 0; top: 0")
+            a.good(href="/chain/approvalAction/#{singleData.index}/Approved") Approve
+            a.bad(href="/chain/approvalAction/#{singleData.index}/Rejected") Reject
+        hr(style="margin-top: 10px; margin-bottom: 10px;")
+        table
+          each medicine in singleData.medicine
+            each key in Object.keys(medicine)
+              tr
+                th #{key}
+                th :
+                th #{medicine[key]}
+      br
+  else
+    div.bloackData
+      div.title
+        h3 No Record Requires Approval.
