@@ -3,6 +3,18 @@ const router = express.Router()
 const { check } = require('express-validator/check')
 var cors = require('cors')
 
+
+const firebase = require('firebase')
+firebase.initializeApp({
+  apiKey: "AIzaSyBnA4D7kLwmhvk2tUiz8FffpC00huOt2O8",
+  authDomain: "fallcalculate.firebaseapp.com",
+  databaseURL: "https://fallcalculate.firebaseio.com",
+  projectId: "fallcalculate",
+  storageBucket: "fallcalculate.appspot.com",
+  messagingSenderId: "681734581463"
+})
+
+
 const Chiccocoin = require('../middleware/chiccocoin')
 const _json = require('../defaultMed.json')
 
@@ -44,6 +56,10 @@ router.get('/chain/approval', function (req, res, next) {
 
 router.get('/chain/approvalAction/:id/:approval', function (req, res, next) {
   Chiccocoin.updateChain(req.params.id, {Approval: req.params.approval})
+  firebase.database()
+    .ref('testing')
+    .push()
+    .set('This is random')
   res.redirect('/chain/approval')
 })
 
